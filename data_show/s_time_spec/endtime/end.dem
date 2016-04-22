@@ -1,0 +1,27 @@
+set title "End time of servants during some period"
+
+set grid
+set key box
+set autoscale fix
+set ytics 0,1
+set xtics 100
+set yrange [-1:21]
+
+
+set multiplot layout 2,1
+
+set ylabel "Servant ID"
+set xlabel "Time(ms)"
+set xrange [4000:5999]
+
+plot 'formate_order.data1' using 1:2 w lp pt 7 t 'end time' 
+
+set ylabel "Servant ID"
+set xlabel "Time(ms)"
+set xrange [6000:8000]
+
+plot 'formate_order.data2' using 1:2 w lp pt 7 t 'end time' 
+
+
+unset multiplot
+

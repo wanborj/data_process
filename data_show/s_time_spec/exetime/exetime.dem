@@ -1,0 +1,29 @@
+set title "Execution Time of Servants"
+
+set grid
+set key box
+set autoscale fix
+set ytics 0,1
+set xtics 100
+set yrange [-1:21]
+
+
+set multiplot layout 2,1
+
+set ylabel "Servant ID"
+set xlabel "Time(ms)"
+set xrange [4000:5999]
+
+plot 'formate_order.data1' using 2:1:2:3 with xerrorbars title "Execution Time", '' using 2:1 w p pt 7 ps 1 title "Start Time", '' using 3:1 w p pt 4 ps 1 title "Finish Time"
+#'' using 2:1:4:5 with xerrorbars title "Period", '' using 4:1 w p pt 8 ps 1 title "Ready Time", '' using 5:1 w p pt 9 ps 1 title "Output Time"
+
+set ylabel "Servant ID"
+set xlabel "Time(ms)"
+set xrange [6000:8000]
+
+plot 'formate_order.data2' using 2:1:2:3 with xerrorbars title "Execution Time", '' using 2:1 w p pt 7 ps 1 title "Start Time", '' using 3:1 w p pt 4 ps 1 title "Finish Time" 
+#, '' using 2:1:4:5 with xerrorbars title "Period", '' using 4:1 w p pt 8 ps 1 title "Ready Time", '' using 5:1 w p pt 9 ps 1 title "Output Time" 
+
+
+unset multiplot
+

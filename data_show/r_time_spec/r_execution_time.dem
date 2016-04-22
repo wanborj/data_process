@@ -1,0 +1,14 @@
+set title 'R-Servant execution time'
+set grid
+set key box
+set autoscale
+set ytics 0.5
+set yrange[-0.6:2]
+
+set xrange [0:1000]
+set xlabel "Execution Cycles"
+set ylabel "Time(ms)"
+
+plot 'r_execution_time.data' using 1:2 w p pt 2 title "R-Servant execution time"
+
+
