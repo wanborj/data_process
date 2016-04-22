@@ -1,37 +1,11 @@
-1.  data set
-    1) data_process.data which contains the execution time information of all servants
-    2) data_analysis.data which contains the statistics data of servants in terms of 1)
+1. data analysis
+    use gnuplot show the statistics datas
 
-2. wcet.sh
-    seperate the time information of servants from data_process.data into seperated files
-    including: 0.txt 1.txt ... 20.txt
-    these separated files are moved to data_set
+2. r_time_spec
+    R-Servant execution time specification including start time, end time
 
-3. join.sh
-    join the files in terms of task into task files in task_set
-    including: task0.txt task1.txt task2.txt task3.txt
+3. s_time_spec
+    S-Servant execution time specification including ready time, start time, end time and deadline
 
-4. data_set
-   including separated files and directory task_set, servant_set 
-   1) servant_set, formated informations of servants in terms of 2
-   2) task_set, join all the time information of servants of one task into separated task files in terms of 1)
-
-
-*.dem
-data_analysis.dem
-    input file: data_analysis.data
-    create the pic of statistics data of servants
-
-formate_order.dem
-    input file: formate_order.data1 formate_order.data2
-    create the pic of execution order of servants in 400 times
-
-task0.dem
-
-task1.dem
-
-task2.dem
-
-task3.dem
-
-
+4. task_time_spec
+    use gnuplot show the response time of all tasks
